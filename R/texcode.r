@@ -638,7 +638,7 @@ lb <- function() {
 #' matrix(ncol = 1)
 #' "$$" %_% matrix_name(var, "a", m_by_n = TRUE) %_% a %_% "$$"
 #' 
-matrix_name <- function(mat = X, var = "X", m = NULL, n = NULL){
+matrix_name <- function(mat = NULL, var = "X", m = NULL, n = NULL){
   if (length(m) > 0 & length(n) > 0){
     out <- sprintf("\\underset{(%s \\times %s)} {\\mathbf{%s}} = ", m, n,var) 
   } else {
