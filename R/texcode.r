@@ -625,7 +625,7 @@ lb <- function() {
 }
 
 #' Generate the assigned variable in standard matrix notation as latex
-#' 
+#' ´
 #' 
 #' @param mat    matrix object
 #' @param var string with the name of the variable
@@ -639,7 +639,7 @@ lb <- function() {
 #' "$$" %_% matrix_name(var, "a", m_by_n = TRUE) %_% a %_% "$$"
 #' 
 matrix_name <- function(mat = X, var = "X", m = NULL, n = NULL){
-  if (length(m) > 0 & length(m) > 0){
+  if (length(m) > 0 & length(n) > 0){
     out <- sprintf("\\underset{(%s \\times %s)} {\\mathbf{%s}} = ", m, n,var) 
   } else {
     out <- sprintf("\\underset{(%s \\times %s)} {\\mathbf{%s}} = ", nrow(mat), ncol(mat), var)  
