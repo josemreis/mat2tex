@@ -629,10 +629,18 @@ lb <- function() {
 #' 
 #' @param mat    matrix object
 #' @param var string with the name of the variable
-#' @param m_by_n just describe order of the matrix is of m by n
-matrix_name <- function(mat = X, var = "X", m_by_n = FALSE){
-  if (m_by_n){
-    out <- sprintf("\\underset{(m \\times n)} {\\mathbf{%s}} = ", var) 
+#' @param m user defined number of rows
+#' @param n user defined number of columns
+#' Example
+#' require(dp)
+#' a <- rep("a_{%s}", 4) %>%
+#' sprintf(c(1:3, "m")) %>%
+#' matrix(ncol = 1)
+#' "$$" %_% matrix_name(var, "a", m_by_n = TRUE) %_% a %_% "$$"
+#' 
+matrix_name <- function(mat = X, var = "X", m = NULL, n = NULL){
+  if (length(m) > 0 & length(m) > 0){
+    out <- sprintf("\\underset{(%s \\times %s)} {\\mathbf{%s}} = ", m, n,var) 
   } else {
     out <- sprintf("\\underset{(%s \\times %s)} {\\mathbf{%s}} = ", nrow(mat), ncol(mat), var)  
   }
