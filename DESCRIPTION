@@ -11,3 +11,4 @@ VignetteBuilder: knitr
 Suggests:
     knitr,
     VignetteBuilder
+RoxygenNote: 7.1.1
