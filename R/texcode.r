@@ -631,6 +631,7 @@ lb <- function() {
 #' @param var string with the name of the variable
 #' @param m user defined number of rows
 #' @param n user defined number of columns
+#' @export
 #' Example
 #' require(dp)
 #' a <- rep("a_{%s}", 4) %>%
