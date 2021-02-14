@@ -630,7 +630,7 @@ lb <- function() {
 #' @param mat    matrix object
 #' @param var string with the name of the variable
 #' @param m_by_n just describe order of the matrix is of m by n
-make_matrix_var <- function(mat = X, var = "X", m_by_n = FALSE){
+matrix_name <- function(mat = X, var = "X", m_by_n = FALSE){
   if (m_by_n){
     out <- sprintf("\\underset{(m \\times n)} {\\mathbf{%s}} = ", var) 
   } else {
